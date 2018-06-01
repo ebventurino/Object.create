@@ -56,6 +56,11 @@ const ddavis = Object.create({}, {
 })
 
 const market = Object.create({}, {
+    business: {
+        enumerable:true,
+        writable:true,
+        value: "The Market"
+    },
     employmentStart: {
         enumerable: true,
         writable: false,
@@ -115,7 +120,6 @@ const jobs = [firstlight, ddavis, market]
 
 for(let i = 0; i < jobs.length; i++) {
     let article = document.createElement("article")
-    article.id = firstlight.business.value
+    article.setAttribute("id",jobs[i].business);
     console.log(article)
 }
-
